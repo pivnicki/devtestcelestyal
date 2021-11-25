@@ -311,4 +311,133 @@ return $url;
 }
 
  
+ /*
+* Creating a function to create our CPT
+*/
  
+function cptui_register_my_cpts_press() {
+
+	/**
+	 * Post Type: Press.
+	 */
+
+	$labels = [
+		"name" => __( "Press", "ftheme" ),
+		"singular_name" => __( "Press", "ftheme" ),
+		"menu_name" => __( "Press", "ftheme" ),
+		"all_items" => __( "All Press", "ftheme" ),
+		"add_new" => __( "Add new", "ftheme" ),
+		"add_new_item" => __( "Add new Press", "ftheme" ),
+		"edit_item" => __( "Edit Press", "ftheme" ),
+		"new_item" => __( "New Press", "ftheme" ),
+		"view_item" => __( "View Press", "ftheme" ),
+		"view_items" => __( "View Press", "ftheme" ),
+		"search_items" => __( "Search Press", "ftheme" ),
+		"not_found" => __( "No Press found", "ftheme" ),
+		"not_found_in_trash" => __( "No Press found in trash", "ftheme" ),
+		"parent" => __( "Parent Press:", "ftheme" ),
+		"featured_image" => __( "Featured image for this Press", "ftheme" ),
+		"set_featured_image" => __( "Set featured image for this Press", "ftheme" ),
+		"remove_featured_image" => __( "Remove featured image for this Press", "ftheme" ),
+		"use_featured_image" => __( "Use as featured image for this Press", "ftheme" ),
+		"archives" => __( "Press archives", "ftheme" ),
+		"insert_into_item" => __( "Insert into Press", "ftheme" ),
+		"uploaded_to_this_item" => __( "Upload to this Press", "ftheme" ),
+		"filter_items_list" => __( "Filter Press list", "ftheme" ),
+		"items_list_navigation" => __( "Press list navigation", "ftheme" ),
+		"items_list" => __( "Press list", "ftheme" ),
+		"attributes" => __( "Press attributes", "ftheme" ),
+		"name_admin_bar" => __( "Press", "ftheme" ),
+		"item_published" => __( "Press published", "ftheme" ),
+		"item_published_privately" => __( "Press published privately.", "ftheme" ),
+		"item_reverted_to_draft" => __( "Press reverted to draft.", "ftheme" ),
+		"item_scheduled" => __( "Press scheduled", "ftheme" ),
+		"item_updated" => __( "Press updated.", "ftheme" ),
+		"parent_item_colon" => __( "Parent Press:", "ftheme" ),
+	];
+
+	$args = [
+		"label" => __( "Press", "ftheme" ),
+		"labels" => $labels,
+		"description" => "",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => true,
+		"rest_base" => "",
+		"rest_controller_class" => "WP_REST_Posts_Controller",
+		"has_archive" => "press",
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"delete_with_user" => false,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"rewrite" => [ "slug" => "press", "with_front" => true ],
+		"query_var" => true,
+		"menu_position" => 9,
+		"menu_icon" => "dashicons-media-spreadsheet",
+		"supports" => [ "title", "editor", "thumbnail", "custom-fields" ],
+		"show_in_graphql" => false,
+	];
+
+	register_post_type( "press", $args );
+}
+
+add_action( 'init', 'cptui_register_my_cpts_press' );
+
+
+function cptui_register_my_taxes_press_category() {
+
+	/**
+	 * Taxonomy: Press Categories.
+	 */
+
+	$labels = [
+		"name" => __( "Press Categories", "ftheme" ),
+		"singular_name" => __( "Press Category", "ftheme" ),
+		"menu_name" => __( "Press Categories", "ftheme" ),
+		"all_items" => __( "All Press Categories", "ftheme" ),
+		"edit_item" => __( "Edit Press Category", "ftheme" ),
+		"view_item" => __( "View Press Category", "ftheme" ),
+		"update_item" => __( "Update Press Category name", "ftheme" ),
+		"add_new_item" => __( "Add new Press Category", "ftheme" ),
+		"new_item_name" => __( "New Press Category name", "ftheme" ),
+		"parent_item" => __( "Parent Press Category", "ftheme" ),
+		"parent_item_colon" => __( "Parent Press Category:", "ftheme" ),
+		"search_items" => __( "Search Press Categories", "ftheme" ),
+		"popular_items" => __( "Popular Press Categories", "ftheme" ),
+		"separate_items_with_commas" => __( "Separate Press Categories with commas", "ftheme" ),
+		"add_or_remove_items" => __( "Add or remove Press Categories", "ftheme" ),
+		"choose_from_most_used" => __( "Choose from the most used Press Categories", "ftheme" ),
+		"not_found" => __( "No Press Categories found", "ftheme" ),
+		"no_terms" => __( "No Press Categories", "ftheme" ),
+		"items_list_navigation" => __( "Press Categories list navigation", "ftheme" ),
+		"items_list" => __( "Press Categories list", "ftheme" ),
+		"back_to_items" => __( "Back to Press Categories", "ftheme" ),
+	];
+
+	
+	$args = [
+		"label" => __( "Press Categories", "ftheme" ),
+		"labels" => $labels,
+		"public" => true,
+		"publicly_queryable" => true,
+		"hierarchical" => true,
+		"show_ui" => true,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"query_var" => true,
+		"rewrite" => [ 'slug' => 'media', 'with_front' => true,  'hierarchical' => true, ],
+		"show_admin_column" => false,
+		"show_in_rest" => true,
+		"show_tagcloud" => true,
+		"rest_base" => "press_category",
+		"rest_controller_class" => "WP_REST_Terms_Controller",
+		"show_in_quick_edit" => true,
+		"show_in_graphql" => false,
+	];
+	register_taxonomy( "press_category", [ "press" ], $args );
+}
+add_action( 'init', 'cptui_register_my_taxes_press_category' );
