@@ -1,0 +1,23 @@
+{
+    "key": "group_5ef1d0d99324d",
+    "title": "[CONTENT] - Special Occasions",
+    "fields": [],
+    "location": [
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "template-parts\/template-special-occasions.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1592913591
+}

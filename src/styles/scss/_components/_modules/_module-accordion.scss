@@ -1,0 +1,65 @@
+.m-accordion {
+  overflow: hidden;
+
+  &:first-of-type {
+    .m-accordion__intro {
+      padding-top: 23px;
+      border-top: 1px solid $gray-c;
+
+      &::before {
+        top: 29px;
+      }
+    }
+  }
+
+  &__intro {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    border-bottom: 1px solid $gray-c;
+    padding-bottom: 28px;
+    transition: $transition-base;
+
+    h4 {
+      margin: 0;
+      color: $dark-blue;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 11px;
+      top: 6px;
+      height: 14px;
+      width: 14px;
+      transition: $transition-base;
+      border-bottom: 3px solid $dark-blue;
+      border-right: 3px solid $dark-blue;
+      transform: rotate(45deg);
+    }
+  }
+
+  &__content {
+    padding-top: 25px;
+    max-height: 0;
+    overflow: hidden;
+    will-change: max-height;
+    transition: $transition-base;
+    color: $gray-5;
+  }
+
+  &.active {
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+
+    .m-accordion__intro {
+      border-color: transparent;
+
+      &::before {
+        transform: rotate(-135deg);
+        border-color: $light-blue;
+      }
+    }
+  }
+}

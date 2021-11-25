@@ -1,0 +1,236 @@
+.m-ship {
+  position: relative;
+  text-align: left;
+  margin-bottom: 30px;
+
+  a {
+    position: relative;
+    display: block;
+
+    img {
+      height: 150px;
+
+      @include media-up(m) {
+        height: auto;
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      background-image: linear-gradient(to bottom, transparent, $blue-4 89%);
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+    }
+  }
+
+  .-content {
+    position: absolute;
+    bottom: 0;
+    padding: 5px 10px;
+
+    @include media-up(s) {
+      bottom: 0;
+      padding: 20px;
+    }
+
+    @include media-up(m) {
+      bottom: 50px;
+      padding: 20px;
+    }
+  }
+}
+
+.m-suites {
+  margin-top: 50px;
+
+  .suites {
+    background: $ice-blue;
+    padding: 25px 30px;
+  }
+
+  .s-tabs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    list-style: none;
+    padding: 0;
+
+    .a-link {
+
+      &.tab {
+        margin: 0 10px 10px 0;
+      }
+    }
+  }
+}
+
+.olympia {
+  .box {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+
+    &.IA {
+      background: $yellow-c6;
+    }
+
+    &.XA {
+      background: $pink-ec;
+    }
+
+    &.IB {
+      background: $green-9;
+    }
+
+    &.IC {
+      background: $blue-0;
+    }
+
+    &.SJ {
+      background: #fdc98b;
+    }
+
+    &.SB {
+      background: #c77185;
+    }
+
+    &.SG {
+      background: #93778e;
+    }
+
+    &.XA {
+      background: #ec4f9d;
+    }
+
+    &.XB {
+      background: #ffd331;
+    }
+
+    &.XC {
+      background: #f6a7c9;
+    }
+  }
+}
+
+.experience {
+  .box {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+
+    &.IA {
+      background: $yellow-c6;
+    }
+
+    &.IB {
+      background: #8EAA45;
+    }
+
+    &.IC {
+      background: #39598D;
+    }
+
+    &.SJ {
+      background: #fdc98b;
+    }
+
+    &.SB {
+      background: #c77185;
+    }
+
+    &.SG {
+      background: #694C66;
+    }
+
+    &.S {
+      background: #B0B19F;
+    }
+
+    &.SV {
+      background: #916E72;
+    }
+
+    &.XA {
+      background: #70b364;
+    }
+
+    &.XB {
+      background: #BD4082;
+    }
+
+    &.XC {
+      background: #F6D54F;
+    }
+
+    &.XD {
+      background: #CD99B5;
+    }
+    
+    &.SJA {
+      background: #6AA8DB;
+    }
+
+    &.SJB {
+      background: #A7D3F0;
+    }
+
+    &.WSJ {
+      background: #196189;
+    }
+
+    &.WS {
+      background: #F9C5DC;
+    }
+
+    &.WSV {
+      background: #B45A37;
+    }
+    
+    &.WSG {
+      background: #CD8D84;
+    }
+  }
+}
+
+.states {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.symbol {
+  list-style: none;
+
+  li {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $gray-c;
+    padding: 10px 0;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    span {
+      min-width: 40px;
+      margin-right: 10px;
+      text-align: center;
+
+      &.-icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.fade {
+  opacity: 0;
+  height: 0;
+}
+

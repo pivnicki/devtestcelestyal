@@ -1,0 +1,79 @@
+.-exc {
+
+  .-inf {
+    @include media-down(m) {
+      padding: 0;
+    }
+  }
+
+}
+
+.m-excursion-info {
+  background: $ice-blue;
+  margin: 0 30px;
+  padding: 30px;
+  color: $dark-blue;
+
+  @include media-down(m) {
+    margin: 0;
+  }
+
+  .top {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 20px;
+
+      .a-icon {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+
+        i {
+          font-size: 30px;
+        }
+      }
+
+      .a-text {
+        flex: 3;
+
+        p {
+          margin-bottom: 0;
+          font-size: 16px;
+          color: $dark-blue;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    border-top: 1px solid $gray-c;
+
+    .price {
+      text-align: center;
+
+      .amount {
+        font-size: 34px;
+        font-weight: bold;
+        color: $dark-blue;
+      }
+
+      .group {
+        font-size: 13px;
+        font-weight: bold;
+        text-align: center;
+        color: $dark-blue;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

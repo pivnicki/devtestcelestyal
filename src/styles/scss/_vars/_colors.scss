@@ -1,0 +1,107 @@
+// Variables
+
+//
+// Color system
+//
+
+// stylelint-disable
+$white:           #fff !default;
+$ice-blue:        #ebf0f2 !default;
+$ice-blue-two:    #f0f4f5 !default;
+$text-color:      #555 !default;
+$text-color-dark: #666 !default;
+$black-05:        rgba(#000, .05) !default;
+$black-10:        rgba(#000, .1) !default;
+$black-15:        rgba(#000, .15) !default;
+$black-20:        rgba(#000, .2) !default;
+$black-25:        rgba(#000, .25) !default;
+$black-30:        rgba(#000, .3) !default;
+$black-35:        rgba(#000, .35) !default;
+$black-50:        rgba(#000, .5) !default;
+$black-60:        rgba(#000, .6) !default;
+$black-70:        rgba(#000, .7) !default;
+$black-80:        rgba(#000, .8) !default;
+$black-90:        rgba(#000, .9) !default;
+$black:           #000 !default;
+
+$blacks: () !default;
+$blacks: map-merge((
+        '5': $black-05,
+        '10': $black-10,
+        '15': $black-15,
+        '20': $black-20,
+        '25': $black-25,
+        '30': $black-30,
+        '35': $black-35,
+        '50': $black-50,
+        '60': $black-60,
+        '70': $black-70,
+        '80': $black-80,
+        '90': $black-90
+), $blacks);
+
+$blue-light-1:  #f0f4f5 !default;
+$light-blue:    #1aa4ff !default;
+$blue:          #006eb6 !default;
+$dark-blue:     #004776 !default;
+$darker-blue:   #002664 !default;
+$blue-4:        #002741 !default;
+$orange:        #de7d13 !default;
+$purple:        #6f42c1 !default;
+$pink:          #e83e8c !default;
+$red:           #dc3545 !default;
+$yellow:        #ffc107 !default;
+$green:         #28a745 !default;
+$teal:          #20c997 !default;
+$cyan:          #17a2b8 !default;
+$gray-5:        #555 !default;
+$black-2:       #222 !default;
+$gray-6:        #666 !default;
+$gray-9:        #999 !default;
+$gray-c:        #ccc !default;
+$gray-ea:     #eaeaea !default;
+$gray-f4:     #f4f4f4 !default;
+$yellow-c6:   #c6aa00 !default;
+$pink-ec:     #ec4f9d !default;
+$green-9:     #9dcc52 !default;
+$blue-0:      #077bc0 !default;
+
+
+
+$colors: () !default;
+$colors: map-merge((
+        'blue-light-1': $blue-light-1,
+        'light-blue': $light-blue,
+        'blue':       $blue,
+        'dark-blue':  $dark-blue,
+        'darker-blue': $darker-blue,
+        'blue-4':     $blue-4,
+        'purple':     $purple,
+        'pink':       $pink,
+        'red':        $red,
+        'orange':     $orange,
+        'yellow':     $yellow,
+        'green':      $green,
+        'teal':       $teal,
+        'cyan':       $cyan,
+        'white':      $white,
+        'gray-5':     $gray-5,
+        'gray-2':     $black-2,
+        'gray-6':     $gray-6,
+        'gray-9':     $gray-9,
+        'gray-c':     $gray-c,
+        'gray-ea':    $gray-ea,
+        'gray-f4':    $gray-f4,
+), $colors);
+
+// stylelint-enable
+
+// Set a specific jump point for requesting color jumps
+$color-interval:      8% !default;
+
+// The yiq lightness value that determines when the lightness of color changes from 'dark' to 'light'. Acceptable values are between 0 and 255.
+$contrast-threshold: 150 !default;
+
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+$color-text-dark:  $text-color !default;
+$color-text-light: $white !default;

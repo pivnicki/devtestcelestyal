@@ -1,0 +1,34 @@
+
+.-booking {
+  margin-bottom: 40px;
+  overflow: hidden;
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .-gray {
+    background: $ice-blue-two;
+    min-height: 100px;
+
+    .-more {
+      padding: 20px 20px 0;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.-login {
+  display: none;
+}
+
+.-manage {
+  margin-top: 40px;
+}
+
+
+
+
+
+

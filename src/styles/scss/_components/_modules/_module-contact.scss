@@ -1,0 +1,126 @@
+.m-contact {
+
+  .wpcf7,
+  .form {
+    margin: 40px auto 0;
+
+    label {
+      font-family: $font-family-sans-serif;
+      font-size: 16px;
+      color: $gray-5;
+      text-transform: uppercase;
+    }
+
+    .select {
+      margin-top: 15px;
+    }
+
+    .-special,
+    .wpcf7-list-item-label,
+    label {
+      font-size: 13px;
+      color: $gray-6;
+    }
+  }
+
+  .input-wrap {
+    margin-bottom: 15px;
+  }
+
+  input:not([type='checkbox']) {
+    height: 50px;
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 4px;
+    border: solid 1px $gray-c;
+    padding-left: 10px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+    textarea {
+      width: 100%;
+      margin-top: 15px;
+      border-radius: 4px;
+      border: solid 1px $gray-c;
+      padding-left: 10px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .wpcf7-submit {
+      background: $blue;
+      color: $white;
+      cursor: pointer;
+      margin-bottom: 40px;
+    }
+
+  .-terms {
+    font-size: 13px;
+  }
+
+  .wpcf7-list-item {
+    margin: 0;
+  }
+
+  .offer {
+    font-size: 13px;
+    color: $gray-6;
+  }
+}
+
+.-locations {
+  padding: 30px 15px;
+}
+
+.-press {
+  background: $ice-blue;
+  padding: 30px 25px;
+}
+
+.-book {
+  width: 50%;
+  margin: 0 auto;
+
+   label {
+     font-family: 'Lato';
+     font-size: 16px;
+     color: #555;
+     text-transform: uppercase;
+   }
+
+    span {
+      font-size: 14px;
+      color: $gray-6;
+    }
+
+    input[type='checkbox'] {
+      margin-right: 5px;
+    }
+
+    input:not([type='checkbox']) {
+      height: 50px;
+      width: 100%;
+      margin-bottom: 15px;
+      margin-top: 20px;
+      border-radius: 4px;
+      border: solid 1px #ccc;
+      padding-left: 10px;
+      outline: none;
+    }
+
+    .submit {
+      background: #006eb6;
+      color: #fff;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .a-link {
+      float: right;
+    }
+}

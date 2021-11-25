@@ -1,0 +1,44 @@
+.m-images {
+  display: flex;
+  flex-wrap: wrap;
+
+  img {
+    margin: 60px 30px;
+  }
+}
+
+.bf-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 2px solid #62C4E8;
+    padding: 20px;
+    position: relative;
+    margin-top: 20px;
+
+    &::before {
+      display: block;
+      content: "WHAT'S INCLUDED IN THE FARE";
+      color: #0D33A0;
+      position: absolute;
+      top: -13px;
+      left: 35%;
+      background: #fff;
+      padding: 0 20px;
+      text-align: center;
+
+      @include media-down(m) {
+        left: 25%;
+      }
+
+      @include media-down(s) {
+        left: 9%;
+      }
+    }
+
+  img {
+    width: 150px;
+    height: 150px;
+  }
+}
+

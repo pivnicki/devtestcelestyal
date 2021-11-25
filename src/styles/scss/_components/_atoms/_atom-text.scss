@@ -1,0 +1,180 @@
+.a-text {
+  font-size: 18px;
+  line-height: 1.67;
+  color: $gray-5;
+  @include spacing(11);
+
+  &.-date {
+    margin-top: 20px;
+  }
+
+  &.-location {
+    font-size: 16px;
+    color: $gray-5;
+  }
+
+  &.-scr {
+    max-height: 130px;
+    overflow-y: auto;
+  }
+
+  &.-center {
+    text-align: center;
+  }
+
+  &.-left {
+
+    @include media-up(xl) {
+      padding: 0 20px 30px 80px;
+    }
+  }
+
+  &.-right {
+
+    @include media-up(xl) {
+      padding: 0 80px 30px 20px;
+    }
+  }
+
+  &.-offers {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  &.-staff {
+    font-size: 18px;
+    line-height: 1.67;
+    color: $gray-5;
+  }
+
+  &.-contact {
+    font-size: 18px;
+    color: $dark-blue;
+    font-weight: bold;
+  }
+
+  &.-white {
+    color: $white;
+  }
+
+  &.-desc {
+    font-size: 16px;
+    line-height: 1.5;
+    @include spacing(10);
+  }
+
+  &.-excursion {
+    font-size: 14px;
+    color: $white;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &.-booking {
+    font-size: 14px;
+    color: $gray-6;
+    font-weight: normal;
+    //text-transform: capitalize;
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+
+  &.-country {
+    font-size: 14px;
+    color: $gray-6;
+    
+  }
+
+  &.-filt {
+    @include media-down(m) {
+      display: none;
+    }
+  }
+
+  &.-brochure {
+    font-size: 16px;
+    font-weight: normal;
+    color: $white;
+    margin-bottom: 20px;
+  }
+
+  &.-desc {
+    height: 300px;
+    overflow-y: auto;
+    padding-right: 10px;
+  }
+
+  &.-more {
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  &.-mb0 {
+    margin-bottom: 0;
+  }
+
+  &.show {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &.-day {
+    font-size: 16px;
+  }
+
+  &.-fileSize {
+    font-size: 16px;
+    color: $gray-9;
+  }
+
+  &.-follow {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.31;
+    color: $dark-blue;
+    padding-left: 30px;
+    margin-top: 30px;
+  }
+
+  &.-ship {
+    font-size: 12px;
+    color: $white;
+    text-transform: uppercase;
+
+    @include media-up(s) {
+      font-size: 14px;
+    }
+  }
+
+  &.-side {
+    margin-top: 20px;
+    margin-bottom: 0;
+    color: $dark-blue;
+  }
+
+  &.-state {
+    font-size: 18px;
+    line-height: 1.17;
+    color: $gray-5;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 40px;
+  }
+
+  &.-account {
+    font-size: 16px;
+    line-height: 1.17;
+    color: $dark-blue;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  &.-suites {
+    font-size: 16px;
+    font-weight: bold;
+    color: $dark-blue;
+    margin-top: 30px;
+  }
+}

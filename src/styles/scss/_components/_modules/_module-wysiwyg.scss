@@ -1,0 +1,61 @@
+.m-wysiwyg {
+  margin-top: 60px;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $dark-blue;
+
+    &:first-child {
+      margin-bottom: 40px;
+    }
+  }
+
+  p {
+    color: $gray-5;
+
+    &:nth-child(n + 2) {
+      margin-top: 22px;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 36px;
+    margin-bottom: 60px;
+
+    li {
+      color: $gray-5;
+      margin-top: 20px;
+      position: relative;
+
+      &:before {
+        position: absolute;
+        left: -22px;
+        top: 10px;
+        content: '';
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: $gray-5;
+      }
+    }
+  }
+
+  strong {
+    color: $gray-5;
+  }
+
+  &.-connect {
+    margin-top: 0;
+  }
+
+  &.-connect-text {
+    p {
+      margin: 0;
+    }
+  }
+}

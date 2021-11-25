@@ -1,0 +1,36 @@
+.a-input {
+  @include transition;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &.search {
+    width: 100%;
+    background: $white;
+    border: 0;
+    border-radius: 0;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: $text-color;
+  }
+
+  &.-newsletter {
+    width: 100%;
+    border: solid 1px $gray-c;
+    border-radius: 4px;
+    padding: 10px 15px;
+
+    &:focus {
+      border: solid 1px $blue;
+    }
+  }
+
+  &.-offers {
+    width: 100%;
+    border: solid 1px $gray-c;
+    border-radius: 4px;
+    margin-left: 10px;
+    padding: 0 20px;
+  }
+}

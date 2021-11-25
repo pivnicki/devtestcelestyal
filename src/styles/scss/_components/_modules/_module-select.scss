@@ -1,0 +1,90 @@
+select {
+  display: none;
+  visibility: hidden;
+}
+
+.select {
+  position: relative;
+}
+
+.input,
+.select-styled {
+  width: 100%;
+  min-height: 48px;
+  margin: auto;
+  padding: 10px 20px;
+  background: $white;
+  border: 1px solid $gray-c;
+  border-radius: 3px;
+  font-size: 16px;
+
+  &:focus {
+    border-color: $dark-blue;
+    outline: 0;
+  }
+}
+
+.select-styled {
+  position: relative;
+  line-height: 1.9em;
+
+  &:after {
+    position: absolute;
+    content: '\f078';
+    font-family: $font-family-awesome;
+    font-weight: 700;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    @include transition;
+
+    //transform: translateY(-50%);
+    ////@include transition;
+    //content: "";
+    //width: 30px;
+    //height: 30px;
+    //background: url("../ftheme/bundles/images/date.png")  no-repeat;
+    //top: 50%;
+    //right: 15px;
+    //position: absolute;
+    //display: inline-block;
+  }
+
+  &.active {
+    border-color: $blue;
+
+    &:after {
+      transform: translateY(-50%) rotate(-180deg);
+    }
+  }
+}
+
+.select-options {
+  display: none;
+  position: absolute;
+  top: 40px;
+  max-height: 300px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: $white;
+  box-shadow: 0 0 10px 0 $black-25;
+  border-radius: 0 0 3px 3px;
+  font-size: 16px;
+  list-style: none;
+  z-index: 1;
+  overflow: auto;
+
+  @include media-down(m) {
+    top: auto;
+  }
+
+  li {
+    padding: 10px 20px;
+    @include transition;
+
+    &:hover {
+      background: $blue-light-1;
+    }
+  }
+}

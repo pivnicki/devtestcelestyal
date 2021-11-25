@@ -1,0 +1,46 @@
+.a-subtitle {
+
+  &.-header {
+    font-size: 16px;
+    color: $white;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+    &.-inner {
+      text-transform: none;
+    }
+  }
+
+  &.-card {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 9px;
+  }
+
+  &.-excursion {
+    font-size: 13px;
+    color: $blue;
+  }
+
+  &.-inner-content {
+    font-size: 18px;
+    color: $gray-5;
+  }
+
+  &.-brochure {
+    font-size: 18px;
+    color: $gray-5;
+  }
+
+  &.-overview {
+    margin-top: 40px;
+  }
+
+  &.-restaurant {
+    font-size: 18px;
+    font-weight: bold;
+    color: $dark-blue;
+    text-transform: uppercase;
+  }
+
+}

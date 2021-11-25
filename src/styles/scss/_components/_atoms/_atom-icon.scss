@@ -1,0 +1,17 @@
+.a-icon {
+
+  &.-excursion {
+    height: 48px;
+    width: 48px;
+    background: $blue;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.1;
+    padding: 7px;
+
+    i {
+      font-size: 23px;
+      line-height: 48px;
+    }
+  }
+}

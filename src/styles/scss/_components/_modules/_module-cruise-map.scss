@@ -1,0 +1,58 @@
+.m-cruise-map {
+  position: relative;
+
+  @include media-down(l) {
+    margin-top: 30px;
+  }
+
+  img {
+    display: block;
+    max-width: 440px;
+    max-height: 330px;
+    width: auto;
+    height: auto;
+
+    @include media-down(m) {
+      width: 100%;
+    }
+  }
+
+  .icons {
+
+    display: none;
+
+    .icon {
+      position: absolute;
+      background: $dark-blue;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      @include transition;
+
+      &.active {
+        background: $light-blue;
+
+        .location {
+          opacity: 1;
+        }
+      }
+
+      .number {
+        display: block;
+        color: $white;
+        text-align: center;
+        line-height: 30px;
+      }
+
+      .location {
+        position: absolute;
+        left: 35px;
+        top: 5px;
+        font-weight: bold;
+        color: $dark-blue;
+        opacity: 0;
+      }
+    }
+  }
+}

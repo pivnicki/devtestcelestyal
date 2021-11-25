@@ -1,0 +1,16 @@
+.m-breadcrumbs {
+  padding-bottom: 25px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: normal;
+  color: $gray-5;
+  @include spacing(19);
+
+  &.white {
+    color: $white;
+
+    a {
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+//sass-lint:disable no-css-comments
+/**
+Theme Name: ftheme
+Theme URI: https://fsd.rs
+Author: fSD
+Author URI: https://fsd.rs
+Description: Custom Wordpress theme made by fSD
+Version: 1.0
+License: GNU
+License URI: https://fsd.rs
+Tags: fsd, wordpress, theme
+Text Domain: ftheme
+
+This theme is made with love exclusively for fSD clients
+ */
+
+@import '_utils/functions';
+
+@import 'vars';
+
+@import 'mixins';
+
+@import 'base';
+
+@import 'vendor';
+
+@import 'components';

@@ -1,0 +1,35 @@
+.header-search-form {
+  display: none;
+  position: fixed;
+  box-shadow: 0 0 10px 0 $black-25;
+  width: 100%;
+
+  .header-form {
+    width: 100%;
+  }
+
+}
+.mobile-search-form {
+  display: block;
+  position: relative;
+  padding: 0 20px;
+  margin-bottom: 20px;
+
+  i {
+    position: absolute;
+    right: 30px;
+    top: 7px;
+    color: $dark-blue;
+  }
+
+  .submit {
+    position: absolute;
+    right: 21px;
+    top: 1px;
+    width: 36px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    z-index: 1;
+  }
+}

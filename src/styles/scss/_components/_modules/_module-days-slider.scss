@@ -1,0 +1,135 @@
+.m-days-slider {
+  margin-top: 40px;
+  margin-bottom: 42px;
+
+  .slick-list {
+    padding-right: 16.6666666667%;
+    overflow: visible;
+  }
+
+  .js-slide {
+    visibility: hidden;
+    padding: 0 20px;
+
+    @include media-up(l) {
+      padding: 0 70px;
+    }
+
+    &.slick-center {
+      visibility: visible;
+
+      + .slick-slide {
+        visibility: visible;
+      }
+    }
+
+  }
+
+  .slide {
+    display: flex;
+    flex-direction: column;
+    background: $white;
+
+    @include media-up(m) {
+      flex-direction: row;
+    }
+
+    .half {
+      flex: 1;
+      height: 480px;
+    }
+
+    .day-image {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+
+      @include media-down(m) {
+        height: 220px;
+      }
+    }
+
+    .top {
+      display: flex;
+
+      .day {
+        background: $blue;
+        color: $white;
+        text-align: center;
+        padding: 10px 30px;
+      }
+
+      .depart {
+        color: $dark-blue;
+        text-align: center;
+        padding: 10px 30px;
+      }
+    }
+
+    .text-wrap {
+      padding: 30px;
+
+      @include media-down(m) {
+        height: 250px;
+        overflow: hidden;
+        overflow-y: auto;
+      }
+
+      .itinerary-location {
+        display: flex;
+        flex: auto;
+        flex-wrap: wrap;
+
+        h4:nth-child(1) {
+          margin-right: 5px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .m-nav {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include media-down(l) {
+      display: none;
+    }
+
+    .left,
+    .right {
+      position: absolute;
+      cursor: pointer;
+
+      &.slick-disabled {
+        pointer-events: none;
+        opacity: .2;
+      }
+
+      i {
+        font-size: 34px;
+        color: $white;
+        opacity: .3;
+        @include transition;
+      }
+
+      &:hover {
+
+        i {
+          opacity: 1;
+        }
+      }
+    }
+
+    .left {
+      left: 70px;
+    }
+
+    .right {
+      right: 100px;
+    }
+  }
+}
+
